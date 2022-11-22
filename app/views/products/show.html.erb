@@ -1,6 +1,6 @@
-<p> <%= link_to "back", products_path %> </p>
+<p> <%= link_to "Back", products_path %> </p>
 <h1><%= @name %></h1>
 <h3><%= @description %></h3>
 <p> Owner: <%= @user.first_name %> <%= @user.last_name %></p>
 
-<p><%= link_to "book", new_booking_path %></p>
+<p><%= link_to "Book", new_product_booking_path(@product) %></p>
