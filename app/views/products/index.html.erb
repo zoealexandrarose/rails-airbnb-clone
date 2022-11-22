@@ -1,4 +1,6 @@
-
 <% @products.each do |product|%>
 <%= link_to product.name, product_path(product) %>
 <% end %>
+<br>
+
+<%= link_to "Back", root_path%>
