@@ -14,7 +14,7 @@ puts "Creating products..."
 
 User.all.each do |user|
   3.times.each do
-    Product.create!(user: user, name: "Moonshine - Skateboard", description: "Beatuiful skateboard from the 90s", price: 20)
+    Product.create!(user: user, name: "Moonshine - Skateboard", description: "Beautiful skateboard from the 90s", price: 20)
   end
 end
 

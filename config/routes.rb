@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   # resources :users
-  resources :products, only: %i[index show]
+  resources :products, only: %i[index show new create]
   resources :bookings, only: %i[new create]
 end
