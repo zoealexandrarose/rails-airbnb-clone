@@ -1,2 +1,7 @@
 <h2>Add new product</h2>
-
+<%= simple_form_for @product do |f| %>
+          <%= f.input :name %>
+          <%= f.input :description %>
+          <%= f.input :price %>
+          <%= f.submit class: 'btn btn-light border' %>
+        <% end %>
