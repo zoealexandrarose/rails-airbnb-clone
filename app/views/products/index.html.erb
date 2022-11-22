@@ -1,4 +1,4 @@
-<%# <h1><%= @products %></h1> %>
+
 <% @products.each do |product|%>
-<li><%= product.name %></li>
+<%= link_to product.name, product_path(:product_id) %>
 <% end %>
