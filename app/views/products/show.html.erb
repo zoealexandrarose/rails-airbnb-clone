@@ -2,6 +2,9 @@
 <h1><%= @name %></h1>
 <h3><%= @description %></h3>
 <p> Owner: <%= @user.first_name %> <%= @user.last_name %></p>
-<%= cl_image_tag @product.photo.key, height: 300, width: 400, crop: :fill %>
+
+<% if @product.photo.attached? %>
+  <%= cl_image_tag @product.photo.key, height: 300, width: 400, crop: :fill %>
+<% end %>
 
 <p><%= link_to "book", new_product_booking_path(@product) %></p>
