@@ -25,7 +25,7 @@
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Add item", "products/new", class: "dropdown-item" %>
               <%= link_to "My rentals", "users/sign_in", class: "dropdown-item" %>
-              <%= link_to "Log out", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
+              <%= link_to "Log out", "users/sign_in", class: "dropdown-item", data: {turbo_method: :delete} %>
             </div>
           </li>
         <% else %>
