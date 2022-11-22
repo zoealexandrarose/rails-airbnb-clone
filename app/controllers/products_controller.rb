@@ -10,7 +10,7 @@ class ProductsController < ApplicationController
     @name = @product.name
     @description = @product.description
     @price = @product.price
-    @user = Product.find(params[:user_id])
+    @user = @product.user_id
   end
 
   private
