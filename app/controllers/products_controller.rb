@@ -9,6 +9,7 @@ class ProductsController < ApplicationController
   def show
     @name = @product.name
     @description = @product.description
+    @price = @product.price
     @user = Product.find(params[:user_id])
   end
 
