@@ -10,7 +10,7 @@ class ProductsController < ApplicationController
     @name = @product.name
     @description = @product.description
     @price = @product.price
-    @user = @product.user_id
+    @user = @product.user
   end
 
   def new
