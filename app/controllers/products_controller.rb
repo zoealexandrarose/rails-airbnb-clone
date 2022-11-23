@@ -11,6 +11,7 @@ class ProductsController < ApplicationController
     @description = @product.description
     @price = @product.price
     @user = @product.user
+    @booking = Booking.new
   end
 
   def new
