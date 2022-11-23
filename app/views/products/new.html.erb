@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h2>Add new product</h2>
 <%= simple_form_for @product do |f| %>
           <%= f.input :name %>
@@ -7,3 +8,19 @@
           <%= f.input :photo, as: :file %>
           <%= f.submit class: 'btn btn-light border' %>
         <% end %>
+=======
+<div class="container pt-5 new-background">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-6 col-lg-5 form">
+            <h2>Add a new skateboard</h2>
+            <%= simple_form_for @product do |f| %>
+              <%= f.input :name %>
+              <%= f.input :description %>
+              <%= f.input :price %>
+              <%= f.input :photo, as: :file %>
+              <%= f.submit class: 'btn btn-light border' %>
+            <% end %>
+    </div>
+  </div>
+</div>
+>>>>>>> bf1b961ab21b33294e1a9c143c18834200414b35

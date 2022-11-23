@@ -1,10 +1,15 @@
+<h2>Products</h2>
+<%= link_to "Add new product", new_product_path %>
 <% @products.each do |product|%>
 <li><%= link_to product.name, product_path(product) %></li>
 <% end %>
 <br>
+<<<<<<< HEAD
 <div style="width: 100%; height: 600px;"
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
   <br>
+=======
+>>>>>>> bf1b961ab21b33294e1a9c143c18834200414b35
 <%= link_to "Back", root_path%>
