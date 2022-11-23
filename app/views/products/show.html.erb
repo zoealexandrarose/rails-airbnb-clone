@@ -4,6 +4,7 @@
     <div class="col-12 col-lg-8">
     <div class="product-detail">
       <h1><%= @name %></h1>
+      <h3 id="price"> €<%= @price %> / day </h3>
       <h3><%= @description %></h3>
       <p> Owner: <%= @user.first_name %> <%= @user.last_name %></p>
       <% if @product.photo.attached? %>
