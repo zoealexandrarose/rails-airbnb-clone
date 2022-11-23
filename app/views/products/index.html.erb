@@ -4,9 +4,10 @@
 <li><%= link_to product.name, product_path(product) %></li>
 <% end %>
 <br>
+<%= link_to "Back", root_path%>
+<br>
+
 <div style="width: 70%; height: 600px;"
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-  <br>
-<%= link_to "Back", root_path%>
