@@ -5,6 +5,7 @@
   border-radius: 10px;
   padding-top: 20px;
   padding-bottom: 20px;
+  box-shadow: 2px 2px 5px rgb(163, 163, 163);
 }
 
 
@@ -13,8 +14,4 @@
   color: white;
   width: 200px;
   text-align: center;
-}
-
-.background-image {
-  background-image: url("/Users/rosevandergiessen/code/Rosevandergiessen/rails-airbnb-clone/app/assets/images/product-detail-page.jpg");
 }
