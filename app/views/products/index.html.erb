@@ -1,20 +1,21 @@
-<br>
-<%= form_with url: products_path, method: :get, class: "d-flex" do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find a board"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
 
 <div class="container pt-3">
   <h2>Find a board</h2>
-  <p>Rent out a skateboard!</p>
+    <%= form_with url: products_path, method: :get, class: "d-flex pb-3" do %>
+      <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a board"
+      %>
+      <%= submit_tag "Search", class: "btn btn-dark" %>
+    <% end %>
     <div class="list">
       <%= link_to "Back to home", root_path%>
       <%= link_to "Rent out your board", new_product_path %>
     </div>
+
+
+  <h4 class="pt-3">Rent out a skateboard!</h4>
 
   <div class="card-container">
     <div class="cards">
