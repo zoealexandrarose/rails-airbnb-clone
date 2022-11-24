@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
-  skip_before_action :authenticate_user!, only: %i[index show]
-  before_action :set_product, only: %i[show]
+  skip_before_action :authenticate_user!, only: %i[index show new create destroy]
+  before_action :set_product, only: %i[show edit update destroy]
+
 
   def index
     @products = Product.all
@@ -34,6 +35,23 @@ class ProductsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit
+  end
+
+  def update
+    @product.update(product_params)
+    if @product.save
+      redirect_to product_path(@product)
+    else
+      render :new
+    end
+  end
+
+  def destroy
+    @product.destroy
+    redirect_to products_path, status: :see_other
   end
 
   private
