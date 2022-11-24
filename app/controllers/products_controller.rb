@@ -36,6 +36,20 @@ class ProductsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    @product.update(product_params)
+    redirect_to product_path
+  end
+
+  def delete
+  end
+
+  def destroy
+  end
+
   private
 
   def set_product
