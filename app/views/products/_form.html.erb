@@ -1,0 +1,8 @@
+<%= simple_form_for @product do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :price %>
+  <%= f.input :address %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit value: "Rent out this skateboard", class: 'btn btn-light border' %>
+<% end %>
