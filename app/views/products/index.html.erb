@@ -1,26 +1,32 @@
 <div class="container pt-3">
-  <h2>Products</h2>
+  <h2>Find a board</h2>
+  <p>Rent out a skateboard!</p>
     <div class="list">
       <%= link_to "Back to home", root_path%>
       <%= link_to "Rent out your board", new_product_path %>
     </div>
 
-<div class="card-container">
-  <div class="cards">
+  <div class="card-container">
+    <div class="cards">
 
-  <% @products.each do |product|%>
-    <div class="card">
-<%# <%= image_tag("logo.png", :width => 100) %>
-      <%= link_to product.name, product_path(product)%>
-    </div>
-     <% end %>
+    <% @products.each do |product|%>
+      <div class="card">
+      <% if product.photo.attached? %>
+        <%= cl_image_tag product.photo.key, :radius => 10, class:"img" %>
+        <% else %>
+        <%= image_tag "landing_page.jpeg", :radius => 10, class: "img"%>
+      <% end %>
+        <%= link_to product.name, product_path(product), class: "overlay"%>
+      </div>
+      <% end %>
     </div>
 <br>
-    <div style="width: 60%; height: 600px;"
+    <div id="map" style="width: 60%; height: 600px;"
     data-controller="map"
     data-map-markers-value="<%= @markers.to_json %>"
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
     <br>
+
 
 </div>
 </div>
