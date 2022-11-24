@@ -7,6 +7,7 @@
       <h3 id="price"> €<%= @price %> / day </h3>
       <h3><%= @description %></h3>
       <p> Owner: <%= @user.first_name %> <%= @user.last_name %></p>
+
       <% if @product.photo.attached? %>
         <%= cl_image_tag @product.photo.key, height: 400 %>
       <% end %>

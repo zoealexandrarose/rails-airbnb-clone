@@ -1,13 +1,27 @@
+<div class="container pt-3">
 <h2>Products</h2>
-<%= link_to "Add new product", new_product_path %>
-<% @products.each do |product|%>
-<li><%= link_to product.name, product_path(product) %></li>
-<% end %>
-<br>
-<%= link_to "Back", root_path%>
-<br>
+<div class="list">
+<%= link_to "Back to home", root_path%>
+<%= link_to "Rent out your board", new_product_path %>
+</div>
 
-<div style="width: 70%; height: 600px;"
+<div class="card-container">
+<div class="cards">
+
+<% @products.each do |product|%>
+<div class="card">
+<%# <%= image_tag("logo.png", :width => 100) %> 
+<%= link_to product.name, product_path(product)%>
+</div>
+<% end %>
+</div>
+
+
+
+
+<div id="map" style="width: 70%; height: 600px;"
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+</div>
+</div>
