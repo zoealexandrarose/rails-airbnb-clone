@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show new create]
-  before_action :set_product, only: %i[show]
+  before_action :set_product, only: %i[show edit update delete destroy]
 
   def index
     @products = Product.all
@@ -48,6 +48,8 @@ class ProductsController < ApplicationController
   end
 
   def destroy
+    @product.destroy
+    redirect_to products_path
   end
 
   private
