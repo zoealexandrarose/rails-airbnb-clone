@@ -10,20 +10,38 @@ background-position: 25% 95%;
 background-attachment: fixed;
 text-align: left;
 padding: 40px;
+overflow-y: hidden;
 
 h1 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+  font-size: 125px;
   color: white;
+  padding-top: 10vh;
+}
+
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 50px;
+}
+
+.home-buttons {
+  display: flex;
+  margin-top: 30px;
 }
 
 a {
 color: white;
 background-color: black;
 font-weight: 400;
+font-size: 25px;
 border: 1px solid black;
 text-decoration: none;
 padding: 10px;
 border-radius: 5px;
 box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+margin-right: 20px;
 
 &:hover {
   color: pink;
