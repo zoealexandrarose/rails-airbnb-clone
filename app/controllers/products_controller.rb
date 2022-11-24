@@ -2,6 +2,7 @@ class ProductsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show new create destroy]
   before_action :set_product, only: %i[show edit update destroy]
 
+
   def index
     @products = Product.all
     @markers = @products.geocoded.map do |product|
