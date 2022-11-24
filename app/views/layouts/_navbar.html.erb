@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <%= link_to "/", class: "navbar-brand" do %>
-      <%= image_tag "https://i.pinimg.com/originals/6d/c5/c6/6dc5c62f38022d2c4dd5604c46ced6fb.jpg" %>
+      <%= image_tag "pngegg.png" %>
     <% end %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -14,7 +14,7 @@
             <%= link_to "List a board", "products/new", class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Rent a board", "products", class: "nav-link" %>
+            <%= link_to "Rent a board", products_path, class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
             <%= image_tag "https://www.gravatar.com/avatar/5c8b21603fa0aaab73f863d3a2d50073?s=140&d=retro", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
