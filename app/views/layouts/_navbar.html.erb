@@ -23,7 +23,7 @@
           <li class="nav-item dropdown">
             <%= image_tag "https://www.gravatar.com/avatar/5c8b21603fa0aaab73f863d3a2d50073?s=140&d=retro", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "My rentals", "users/sign_in", class: "dropdown-item" %>
+              <%= link_to "My rentals", "bookings", class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete},
                 class: "dropdown-item" %>
             </div>
