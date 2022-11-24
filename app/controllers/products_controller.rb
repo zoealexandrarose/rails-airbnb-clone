@@ -44,6 +44,12 @@ class ProductsController < ApplicationController
     redirect_to product_path
   end
 
+  def delete
+  end
+
+  def destroy
+  end
+
   private
 
   def set_product
