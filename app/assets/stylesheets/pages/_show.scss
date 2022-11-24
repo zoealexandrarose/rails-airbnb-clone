@@ -8,10 +8,28 @@
   box-shadow: 2px 2px 5px rgb(163, 163, 163);
 }
 
+.image-skate {
+  position: relative;
+
+  img {
+    width: 100%
+  }
+}
+
+.price-block {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
 
 #price {
   background-color: black;
   color: white;
   width: 200px;
   text-align: center;
+}
+
+p {
+  font-family: 'Raleway', 'sans-serif';
+  font-size: 18px;
 }
