@@ -1,11 +1,11 @@
 .product-detail {
   width: 70%;
   margin-bottom: 2vh;
-  background: rgb(255, 255, 255);
+
   border-radius: 10px;
   padding-top: 20px;
   padding-bottom: 20px;
-  box-shadow: 2px 2px 5px rgb(163, 163, 163);
+
 }
 
 .image-skate {
@@ -32,4 +32,8 @@
 p {
   font-family: 'Raleway', 'sans-serif';
   font-size: 18px;
+}
+
+body {
+  background-color: white;
 }
