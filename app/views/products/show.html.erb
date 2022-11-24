@@ -18,9 +18,13 @@
     <p class="btn btn-light border"><%= link_to "Edit skateboard", edit_product_path %> </p>
     <%= render 'bookings/form'%>
     <br>
-    <h3>The location of  <%= @name %></h3>
-    MAP PLACEHOLDER
+    <h3>Where am I?</h3>
+      <div id="map" style="width: 90%; height: 400px;"
+        data-controller="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+      </div>
     </div>
   </div>
-</div>
+ </div>
 </div>
