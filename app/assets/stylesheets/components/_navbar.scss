@@ -1,11 +1,15 @@
+.navbar {
+  overflow: hidden;
+  position: fixed;
+  top: 0px;
+}
+
 .navbar-lewagon {
   justify-content: space-between;
   background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
-  position: fixed;
-  top: 0;
   width: 100%;
   box-shadow: rgba(0, 0, 0, 0.55) 0px 5px 15px;
-  z-index: 99;
+  z-index: 1;
 }
 
 .navbar-lewagon .navbar-collapse {
