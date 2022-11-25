@@ -1,6 +1,10 @@
 class BookingsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
 
+  def index
+    @bookings = Booking.all
+  end
+
   def show
     @booking = Booking.find(params[:id])
     @product = Product.find(@booking.product_id)
