@@ -2,8 +2,7 @@
   width: 70%;
   margin-bottom: 2vh;
   border-radius: 10px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  background-color: rgb(255, 255, 255);
 }
 
 .image-skate {
@@ -33,6 +32,58 @@ p {
   font-size: 18px;
 }
 
-body {
-  background-color: white;
+.user-link a {
+  color: rgb(8, 8, 8);
+  border: 2px solid black;
+  padding: 3px;
+  text-decoration: none;
+
+  &:hover {
+    background-color: rgb(179, 179, 179);
+  }
+}
+
+.back-link {
+  margin-bottom: 20px;
+
+}
+
+.show-background {
+  background-image: url(https://wallpapercave.com/wp/wp2593165.jpg);
+  background-size: cover;
+}
+
+.product-title {
+  color: white;
+  margin: 0 auto;
+  width: 70%;
+  padding-top: 10vh;
+
+  h1 {
+    color: white;
+    font-size: 60px;
+    font-family: 'Raleway', 'sans-serif'
+  }
+
+  p {
+    color: pink;
+  }
+}
+
+.back a {
+  color: white;
+  font-size: 20px;
+}
+
+.map {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  padding-right: 0;
+
+  h2 {
+    color: white;
+    font-family: 'Raleway', 'sans-serif'
+  }
 }
