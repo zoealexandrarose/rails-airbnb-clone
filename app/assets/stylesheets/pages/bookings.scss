@@ -2,10 +2,11 @@
   overflow: hidden;
   height: 120px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
   display: flex;
   align-items: center;
   margin: 15px;
+  border: 1px solid black;
 }
 
 .card-product img {
@@ -18,4 +19,13 @@
   padding: 16px;
 }
 
+.card-product-infos p {
+  margin: 0 auto;
+  font-size: 14px;
+}
 
+.index {
+  background-image: url("https://images-prod.dazeddigital.com/1600/azure/dazed-prod/1170/1/1171401.jpg");
+  background-size: cover;
+  height: 80vh;
+}
