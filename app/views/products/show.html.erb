@@ -17,7 +17,7 @@
     </div>
     <div class="col-12 col-lg-4 align-items-center">
       <%= render 'bookings/form'%>
-      <p class="btn btn-light border"><%= link_to "Edit skateboard", edit_product_path %> </p>
+      <p class="btn btn-light border mt-3"><%= link_to "Edit skateboard", edit_product_path %> </p>
       <p class="btn btn-light border"><%= link_to "Delete skateboard", product_path(@product), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %> </p>
     </div>
     <h3>Where am I?</h3>

@@ -1,6 +1,10 @@
 class BookingsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
 
+  def index
+    @bookings = Booking.all
+  end
+
   def show
     @booking = Booking.find(params[:id])
     @product = Product.find(@booking.product_id)
@@ -35,6 +39,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:message, :user_id, :product_id)
+    params.require(:booking).permit(:message, :start_date, :end_date)
   end
 end
