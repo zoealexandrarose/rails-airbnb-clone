@@ -12,4 +12,7 @@
 @import "components/index";
 @import "pages/index";
 
-
+.content-container:not() {
+  min-height: 80vh;
+  margin-top: 20px;
+}
