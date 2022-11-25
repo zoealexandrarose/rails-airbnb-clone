@@ -1,31 +1,46 @@
+<div class="show-background">
+<div class="product-title">
+<div class="back"><%= link_to "Back to all", products_path %> </p></div>
+<h1><%= @product.name %></h1>
+<h3>Description: <%= @product.description %></h3>
+      <% if @user == current_user %>
+      <p> This is your skateboard! </p>
+      <% else %>
+      <p> Owner: <%= @product.user.first_name %> <%= @product.user.last_name %></p>
+      <% end %>
+</div>
+<div class="pt-3">
 <div class="container product-detail">
-<p class="btn btn-light border"><%= link_to "Back to all", products_path %> </p>
   <div class="row justify-content-center">
     <div class="col-12 col-lg-8">
-    <div>
-      <h1><%= @product.name %></h1>
-      <h3 id="price"> €<%= @product.price %> / day </h3>
-      <h3><%= @product.description %></h3>
-
+    <div class="image-skate">
       <% if @product.photo.attached? %>
-        <%= cl_image_tag @product.photo.key, class:"pb-3"%>
+        <%= cl_image_tag @product.photo.key, class:"pb-3" %>
       <% end %>
+      <div class="price-block">
+        <h3 id="price"> €<%= @product.price %> / day </h3>
+      </div>
     </div>
     </div>
-
-    <div class="col-12 col-lg-4 align-items-center">
-    <h3 class="bg-black text-white p-2">Your booking has been confirmed!</h3>
-    <p class="btn btn-light border"><%= link_to "Edit skateboard", edit_product_path %> </p>
-    <p class="btn btn-light border"><%= link_to "Delete skateboard", product_path(@product), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %> </p>
-
-    <br>
-    <h3>Where am I?</h3>
-      <div id="map" style="width: 90%; height: 400px;"
+    <div class="col-12 col-lg-4 align-items-center rounded-right">
+      <% if @user == current_user %>
+      <p class="user-link"><%= link_to "Edit this listing", edit_product_path %> </p>
+      <p class="user-link"><%= link_to "Delete this listing", product_path(@product), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %> </p>
+      <% else %>
+      <div class="confirmation">
+      <h2>Your booking has been confirmed!</h2>
+      <p>The owner will be in touch shortly.</p>
+      </div>
+      <% end %>
+      </div>
+    </div>
+    </div>
+    <div class="map">
+    <h2>Where am I?</h2>
+      <div id="map" style="width: 100%; height: 400px;"
         data-controller="map"
         data-map-markers-value="<%= @markers.to_json %>"
         data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
       </div>
     </div>
-  </div>
- </div>
 </div>
