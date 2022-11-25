@@ -1,4 +1,7 @@
-<p class="btn btn-light border margin-top"><%= link_to "Back to all", products_path %> </p>
+<div class="pt-3">
+<p class="btn btn-light border">
+<%= link_to "Back to all", products_path %> </p>
+</div>
 <div class="container product-detail">
       <h1><%= @name %></h1>
       <p>Description: <%= @description %></p>
@@ -18,7 +21,7 @@
     <div class="col-12 col-lg-4 align-items-center">
       <%= render 'bookings/form'%>
       <p class="btn btn-light border mt-3"><%= link_to "Edit skateboard", edit_product_path %> </p>
-      <p class="btn btn-light border"><%= link_to "Delete skateboard", product_path(@product), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %> </p>
+      <p class="btn btn-light border mt-3"><%= link_to "Delete skateboard", product_path(@product), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %> </p>
     </div>
     <h3>Where am I?</h3>
       <div id="map" style="width: 90%; height: 400px;"
