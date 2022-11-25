@@ -7,10 +7,12 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+
 
   a {
     color: white;
+    background-color: black;
+    padding: 2px;
     text-align: center;
     text-decoration: none;
 
