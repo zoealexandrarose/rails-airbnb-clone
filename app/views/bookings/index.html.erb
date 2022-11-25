@@ -1,5 +1,6 @@
 <div class="container pt-3">
     <h2 class="pb-2">My rentals</h2>
+    <div class="row justify-content-center">
 <div class="col-12 col-md-6 col-lg-5">
 <%  if current_user %>
   <% @bookings.each do |booking| %>
@@ -10,7 +11,7 @@
         <%= image_tag "landing_page.jpeg", :radius => 10, class: "img"%>
 <% end %>
 <div class="card-product-infos">
-  <p>Date:</p>
+  <p>Start date: <%= booking.start_date %></p>
   <p>Message: <%= booking.message %></p>
   <%= booking.user.first_name %>
 </div>
@@ -20,6 +21,7 @@
   <p>No bookings to show.</p>
 <% end %>
 </div>
+  </div>
     <div class="list">
       <%= link_to "Back to home", root_path%>
     </div>
