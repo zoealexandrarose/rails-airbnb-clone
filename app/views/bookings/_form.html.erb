@@ -1,5 +1,6 @@
 <h2>Rent this skateboard!</h2>
 <%= simple_form_for [@product, @booking] do |f| %>
   <%= f.input :message, placeholder: 'Message to owner' %>
+  
   <%= f.submit class: 'btn btn-light border', value: "Contact owner"%>
 <% end %>
