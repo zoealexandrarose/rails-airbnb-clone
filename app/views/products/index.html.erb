@@ -1,6 +1,6 @@
-
+<div class="photo">
 <div class="container pt-5">
-  <h2>Find a board</h2>
+  <h2 class="text-white">Find a board</h2>
     <%= form_with url: products_path, method: :get, class: "d-flex pb-3" do %>
       <%= text_field_tag :query,
     params[:query],
@@ -15,7 +15,7 @@
     <%# </div> %>
 
 
-  <h4 class="pt-3">Rent out a skateboard</h4>
+  <h4 class="pt-3 text-white">Rent out a skateboard</h4>
 
   <div class="card-container">
     <div class="cards">
@@ -38,6 +38,6 @@
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
     <br>
 
-
+</div>
 </div>
 </div>
