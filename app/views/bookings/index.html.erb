@@ -1,22 +1,27 @@
 <div class="container pt-3">
-<div class="d-flex justify-content-between">
-<h2>My bookings</h2>
-<div class="list">
- <%= link_to "Back to home", root_path%>
- </div>
-</div>
-
-<div class="row justify-content-left">
+    <h2 class="pb-2">My rentals</h2>
 <div class="col-12 col-md-6 col-lg-5">
 <%  if current_user %>
-<% @bookings.each do |booking| %>
-<p>Date:</p>
-<p>Message: <%= booking.message %></p>
-<%= booking.user %>
+  <% @bookings.each do |booking| %>
+<div class="card-product">
+<% if booking.product.photo.attached? %>
+        <%= cl_image_tag booking.product.photo.key, :radius => 10, class:"img" %>
+        <% else %>
+        <%= image_tag "landing_page.jpeg", :radius => 10, class: "img"%>
+<% end %>
+<div class="card-product-infos">
+  <p>Date:</p>
+  <p>Message: <%= booking.message %></p>
+  <%= booking.user.first_name %>
+</div>
+</div>
 <% end %>
 <% else %>
-<p>No bookings to show.</p>
+  <p>No bookings to show.</p>
 <% end %>
 </div>
-</div>
+    <div class="list">
+      <%= link_to "Back to home", root_path%>
+    </div>
+  <br>
 </div>
