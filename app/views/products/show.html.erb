@@ -1,12 +1,16 @@
-<div class="pt-3 show-background">
-<p class="btn btn-light border">
-<%= link_to "Back to all", products_path %> </p>
-</div>
-<div class="container product-detail">
+<div class="show-background">
+<div class="product-title">
+<div class="back"><%= link_to "Back to all", products_path %> </p></div>
       <h1><%= @name %></h1>
-      <p>Description: <%= @description %></p>
+      <h3>Description: <%= @description %></h3>
+      <% if @user == current_user %>
+      <p> This is your skateboard! </p>
+      <% else %>
       <p> Owner: <%= @user.first_name %> <%= @user.last_name %></p>
-
+      <% end %>
+</div>
+<div class="pt-3">
+<div class="container product-detail">
   <div class="row justify-content-center">
     <div class="col-12 col-lg-8">
     <div class="image-skate">
@@ -18,20 +22,25 @@
       </div>
     </div>
     </div>
-    <div class="col-12 col-lg-4 align-items-center">
+    <div class="col-12 col-lg-4 align-items-center form">
       <% if @user == current_user %>
-      <p class="btn btn-light border mt-3"><%= link_to "Edit skateboard", edit_product_path %> </p>
-      <p class="btn btn-light border mt-3"><%= link_to "Delete skateboard", product_path(@product), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %> </p>
+      <p class="user-link"><%= link_to "Edit this listing", edit_product_path %> </p>
+      <p class="user-link"><%= link_to "Delete this listing", product_path(@product), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %> </p>
       <% else %>
       <%= render 'bookings/form'%>
       <% end %>
     </div>
-    <h3>Where am I?</h3>
-      <div id="map" style="width: 90%; height: 400px;"
+  </div>
+</div>
+<div class="map">
+    <h2>Where am I?</h2>
+      <div id="map" style="width: 100%; height: 400px;"
         data-controller="map"
         data-map-markers-value="<%= @markers.to_json %>"
         data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
       </div>
+      </div>
+</div>
+
   </div>
- </div>
 </div>
