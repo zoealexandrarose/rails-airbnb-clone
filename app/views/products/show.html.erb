@@ -8,7 +8,7 @@
     <div class="col-12 col-lg-8">
     <div class="image-skate">
       <% if @product.photo.attached? %>
-        <%= cl_image_tag @product.photo.key%>
+        <%= cl_image_tag @product.photo.key, class:"pb-3" %>
       <% end %>
       <div class="price-block">
         <h3 id="price"> €<%= @price %> / day </h3>

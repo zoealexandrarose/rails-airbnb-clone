@@ -1,6 +1,14 @@
 <div class="banner">
   <h1>Rent a skateboard</h1>
-  <h2>Become Tony Hawk for cheap</h2>
+  <h4 class="container">Find a board</h4>
+    <%= form_with url: products_path, method: :get, class: "d-flex pb-3 container" do %>
+      <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Get skating..."
+      %>
+      <%= submit_tag "Search", class: "btn btn-dark" %>
+    <% end %>
   <div class="home-buttons">
     <div>
       <%= link_to "See all skateboards", products_path %>
