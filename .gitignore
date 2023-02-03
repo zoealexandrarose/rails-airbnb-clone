@@ -44,3 +44,4 @@ echo .env*
 
 db/schema.rb
 .env*
+.env*
